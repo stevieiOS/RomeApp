@@ -8,10 +8,14 @@
 import SwiftUI
 
 @main
-struct RomeAppApp: App {
+struct MapAppApp: App {
+    
+    @State private var vm = LocationsViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LocationsView()
+                .environmentObject(vm)
         }
     }
 }
