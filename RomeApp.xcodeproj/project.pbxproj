@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56000CDD2B4CC4B000E5F927 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56000CDC2B4CC4B000E5F927 /* LocationsListView.swift */; };
 		56288B762B4B02270057CD0A /* RomeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56288B752B4B02270057CD0A /* RomeAppApp.swift */; };
 		56288B782B4B02270057CD0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56288B772B4B02270057CD0A /* ContentView.swift */; };
 		56288B7D2B4B02270057CD0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56288B7C2B4B02270057CD0A /* Preview Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56000CDC2B4CC4B000E5F927 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		56288B722B4B02270057CD0A /* RomeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RomeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56288B752B4B02270057CD0A /* RomeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomeAppApp.swift; sourceTree = "<group>"; };
 		56288B772B4B02270057CD0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				56288B8B2B4B023C0057CD0A /* LocationsView.swift */,
+				56000CDC2B4CC4B000E5F927 /* LocationsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56288B782B4B02270057CD0A /* ContentView.swift in Sources */,
+				56000CDD2B4CC4B000E5F927 /* LocationsListView.swift in Sources */,
 				56288B762B4B02270057CD0A /* RomeAppApp.swift in Sources */,
 				56288B972B4B023C0057CD0A /* LocationsViewModel.swift in Sources */,
 				56288B942B4B023C0057CD0A /* LocationsView.swift in Sources */,
