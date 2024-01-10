@@ -15,13 +15,35 @@ struct LocationsView: View {
     
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $vm.mapRegion)
-                .ignoresSafeArea()
+            Map(coordinateRegion: $vm.mapRegion, annotationItems: vm.locations) { location in
+                MapAnnotation(coordinate: location.coordinates) {
+                    LocationAnnotationView()
+                        .scaleEffect(vm.mapLocation == location ? 1 : 0.7)
+                        .shadow(radius: 10)
+                        .onTapGesture {
+                            vm.showNextLocation(location: location)
+                        }
+                }
+            }
+            .ignoresSafeArea()
             
             VStack {
                 header
                     .padding()
                 Spacer()
+                
+                ZStack {
+                    ForEach(vm.locations) { location in
+                        if vm.mapLocation == location {
+                            LocationsPreviewView(location: location)
+                                .shadow(color: Color.blue.opacity(0.5), radius: 20)
+                                .scenePadding()
+                                .transition(.asymmetric(
+                                    insertion: .move(edge: .trailing),
+                                    removal: .move(edge: .leading)))
+                        }
+                    }
+                }
             }
         }
     }
