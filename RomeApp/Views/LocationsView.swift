@@ -26,6 +26,9 @@ struct LocationsView: View {
                 }
             }
             .ignoresSafeArea()
+            .sheet(item: $vm.sheetLocation, onDismiss: nil) {location in
+                LocationDetailView(location: location)
+            }
             
             VStack {
                 header

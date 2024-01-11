@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct LocationsPreviewView: View {
-    
     @EnvironmentObject private var vm: LocationsViewModel
     let location: Location
-    
-    
+
     var body: some View {
         HStack(alignment: .bottom) {
             VStack(alignment: .leading, spacing: 16.0) {
                 imageSection
                 imageTextSection
             }
-            
+
             VStack(spacing: 8) {
                 learnMoreButton
                 nextButton
@@ -43,7 +41,6 @@ struct LocationsPreviewView: View {
             .environmentObject(LocationsViewModel())
     }
 }
-
 
 extension LocationsPreviewView {
     private var imageSection: some View {
@@ -75,10 +72,10 @@ extension LocationsPreviewView {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
-    
+
     private var learnMoreButton: some View {
         Button(action: {
-            
+            vm.sheetLocation = location
         }, label: {
             Text("Learn More")
                 .font(.headline)
@@ -89,8 +86,7 @@ extension LocationsPreviewView {
         .buttonStyle(.borderedProminent)
         .tint(Color.blue)
     }
-    
-    
+
     private var nextButton: some View {
         Button {
             vm.nextButtonPressed()
